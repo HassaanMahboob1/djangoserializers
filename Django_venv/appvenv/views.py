@@ -34,7 +34,7 @@ def testingview(request):
 #         content = {'message': 'Hello, World!'}
 #         return Response(content)
 
-class  TestingViewSet(viewsets.ReadOnlyModelViewSet):
-    list = Testing.objects.all()
+class  TestingViewSet(viewsets.ModelViewSet):
+    queryset = Testing.objects.all()
     serializer_class = TestingSerializers
 
